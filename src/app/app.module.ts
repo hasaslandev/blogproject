@@ -19,6 +19,7 @@ import { BlogAddComponent } from './components/blog-add/blog-add.component';
 import { AboutAddComponent } from './components/about-add/about-add.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     BlogAddComponent,
     AboutAddComponent,
     LoginComponent,
+    BlogHomeComponent,
   ],
   imports: [
     BrowserModule,

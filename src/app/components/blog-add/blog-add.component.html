@@ -1,0 +1,55 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="title">Ürün Ekle</h5>
+        <div class="card-body">
+          <form [formGroup]="blogAddForm">
+            <div class="mb-3">
+              <label for="blogTitle">Blog Başlığı</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="blogTitle"
+                  formControlName="blogTitle"
+                  class="form-control"
+                  aria-label="blogTitle"
+                  placeholder="Blog Başlığı"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="categoryID">Kategori</label>
+              <div class="form-group">
+                <input
+                  type="number"
+                  id="categoryID"
+                  formControlName="categoryID"
+                  class="form-control"
+                  aria-label="categoryID"
+                  placeholder="Kategori"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="blogRating">Blog Puanı</label>
+              <div class="form-group">
+                <input
+                  type="number"
+                  id="blogRating"
+                  formControlName="blogRating"
+                  class="form-control"
+                  aria-label="blogRating"
+                  placeholder="Blog Puanı"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

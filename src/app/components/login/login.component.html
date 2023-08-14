@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(to right, #667eea, #764ba2);
+        overflow: hidden;
+        animation: gradientAnimation 10s ease infinite;
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .login-container {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+        width: 320px;
+        max-width: 90%;
+      }
+
+      .login-container h2 {
+        margin-bottom: 20px;
+      }
+
+      .login-container label {
+        font-weight: bold;
+      }
+
+      .login-container input {
+        width: 100%;
+        padding: 15px; /* Changed to 15px for larger size */
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        outline: none;
+        border-radius: 0;
+        transition: border-color 0.3s ease;
+      }
+
+      .login-container input:focus {
+        border-color: #667eea;
+      }
+
+      .login-container button {
+        padding: 10px 20px;
+        background-color: #667eea;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .login-container button:hover {
+        background-color: #764ba2;
+      }
+
+      /* Added */
+      .login-lines::before,
+      .login-lines::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #ccc;
+        top: 30%;
+        z-index: -1;
+      }
+
+      .login-lines::after {
+        top: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Giriş Yap</h2>
+      <form [formGroup]="loginForm">
+        <div class="form-floating">
+          <input
+            style="height: 55px"
+            formControlName="email"
+            type="email"
+            class="form-control"
+            id="floatingInput"
+            placeholder=" "
+          />
+          <label for="floatingInput">E-Mail Adresi</label>
+        </div>
+        <div class="form-floating">
+          <input
+            style="height: 50px"
+            formControlName="password"
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder=" "
+          />
+          <label for="floatingPassword">Şifre</label>
+        </div>
+        <div class="form-check text-start my-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="remember-me"
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Remember me
+          </label>
+        </div>
+        <button class="btn btn-primary w-100 py-2" (click)="login()">
+          Giriş Yap
+        </button>
+        <p class="mt-5 mb-3 text-body-secondary">&copy; 2023->++</p>
+      </form>
+    </div>
+  </body>
+</html>

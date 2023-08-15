@@ -30,6 +30,7 @@ import { ServiceManagerComponent } from './components/service-manager/service-ma
 import { FooterComponent } from './components/footer/footer.component';
 import { StartComponent } from './components/start/start.component';
 import { DenemeTemplateComponent } from './components/deneme-template/deneme-template.component';
+import { BlogPageComponent } from './components/blog-page/blog-page.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { DenemeTemplateComponent } from './components/deneme-template/deneme-tem
     FooterComponent,
     StartComponent,
     DenemeTemplateComponent,
+    BlogPageComponent,
   ],
   imports: [
     BrowserModule,

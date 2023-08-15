@@ -13,9 +13,10 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { StartComponent } from './components/start/start.component';
+import { BlogPageComponent } from './components/blog-page/blog-page.component';
 
 const routes: Routes = [
-  { path: "", pathMatch: "full", component: BlogComponent },
+  { path: "", pathMatch: "full", component: StartComponent },
   { path: "blogs", component: BlogComponent },
   { path: "blogs/category/:categoryID", component: BlogComponent },
   { path: "blogs/add", component: BlogAddComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: "skills", component: SkillComponent },
   { path: "resume", component: ResumeComponent },
   { path: "start", component: StartComponent },
+  { path: "blogPage", component: BlogPageComponent },
   { path: "portfolio", component: PortfolioComponent },
 ];
 

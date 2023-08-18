@@ -7,7 +7,6 @@ import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CategoryComponent } from './components/category/category.component';
 import { LoginComponent } from './components/login/login.component';
-import { FactsComponent } from './components/facts/facts.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ResumeComponent } from './components/resume/resume.component';
@@ -25,12 +24,12 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "blogHome", component: BlogHomeComponent },
   { path: "hero", component: HeroComponent },
-  { path: "facts", component: FactsComponent },
   { path: "skills", component: SkillComponent },
   { path: "resume", component: ResumeComponent },
   { path: "start", component: StartComponent },
   { path: "blogPage", component: BlogPageComponent },
   { path: "portfolio", component: PortfolioComponent },
+
 ];
 
 @NgModule({

@@ -21,7 +21,6 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { FactsComponent } from './components/facts/facts.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
@@ -47,7 +46,6 @@ import { BlogPageComponent } from './components/blog-page/blog-page.component';
     LoginComponent,
     BlogHomeComponent,
     HeroComponent,
-    FactsComponent,
     SkillComponent,
     ResumeComponent,
     PortfolioComponent,

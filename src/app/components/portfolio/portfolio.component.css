@@ -1,0 +1,23 @@
+/* Adjust the width and height of the portfolio items for a 3-column layout */
+.portfolio-item {
+    width: calc(33.33% - 20px);
+    height: auto; /* You may set a fixed height if needed */
+    margin-bottom: 20px;
+  }
+  
+  /* Hide the portfolio-sizer element */
+  .portfolio-sizer {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  /* Set the gutter between portfolio items */
+  .portfolio-gutter {
+    width: 20px;
+    height: 20px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  

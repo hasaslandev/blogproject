@@ -45,23 +45,58 @@
 
         <nav id="navbar" class="nav-menu navbar">
           <ul>
+            <!--<a href="#hero" class="nav-link scrollto active"
+-->
             <li>
-              <a href="#hero" class="nav-link scrollto active"
+              <a
+                id="hero-link"
+                href="#hero"
+                [ngClass]="{
+                  'nav-link': true,
+                  scrollto: true,
+                  active: isLinkActive('hero-link')
+                }"
+                (click)="handleLinkClick('hero-link')"
                 ><i class="bx bx-home"></i> <span>Ana Menü</span></a
               >
             </li>
             <li>
-              <a href="#about" class="nav-link scrollto"
+              <a
+                id="about-link"
+                href="#about"
+                [ngClass]="{
+                  'nav-link': true,
+                  scrollto: true,
+                  active: isLinkActive('about-link')
+                }"
+                (click)="handleLinkClick('about-link')"
                 ><i class="bx bx-user"></i> <span>Hakkımda</span></a
               >
             </li>
             <li>
-              <a href="#resume" class="nav-link scrollto"
+              <a
+                id="resume-link"
+                href="#resume"
+                [ngClass]="{
+                  'nav-link': true,
+                  scrollto: true,
+                  active: isLinkActive('resume-link')
+                }"
+                (click)="handleLinkClick('resume-link')"
                 ><i class="bx bx-file-blank"></i> <span>Özgeçmişim</span></a
               >
             </li>
             <li>
-              <a href="#services" class="nav-link scrollto">
+              <a
+                id="services-link"
+                href="#services"
+                [ngClass]="{
+                  'nav-link': true,
+                  scrollto: true,
+                  active: isLinkActive('services-link')
+                }"
+                (click)="handleLinkClick('services-link')"
+              >
                 <i class="bx bx-server"></i>
                 <span>
                   Bu Web Sitesini Geliştirirken<br />
@@ -70,18 +105,42 @@
               </a>
             </li>
             <li>
-              <a href="#skills" class="nav-link scrollto"
+              <a
+                id="skills-link"
+                href="#skills"
+                [ngClass]="{
+                  'nav-link': true,
+                  scrollto: true,
+                  active: isLinkActive('skills-link')
+                }"
+                (click)="handleLinkClick('skills-link')"
                 ><i class="bx bx-alarm-add"></i> <span>Yeteneklerim</span></a
               >
             </li>
             <li>
-              <a href="#portfolio" class="nav-link scrollto"
+              <a
+                id="portfolio-link"
+                href="#portfolio"
+                [ngClass]="{
+                  'nav-link': true,
+                  scrollto: true,
+                  active: isLinkActive('portfolio-link')
+                }"
+                (click)="handleLinkClick('portfolio-link')"
                 ><i class="bx bx-book-content"></i> <span>Bloglarım</span></a
               >
             </li>
 
             <li>
-              <a href="#contact" class="nav-link scrollto"
+              <a
+                id="portfolio-link"
+                href="#contact"
+                [ngClass]="{
+                  'nav-link': true,
+                  scrollto: true,
+                  active: isLinkActive('contact-link')
+                }"
+                (click)="handleLinkClick('contact-link')"
                 ><i class="bx bx-envelope"></i> <span>İletişim</span></a
               >
             </li>
@@ -93,9 +152,9 @@
     <!-- End Header -->
 
     <main id="main">
-      <!-- <router-outlet></router-outlet> -->
+      <router-outlet></router-outlet>
       <!-- ======= Breadcrumbs ======= -->
-      <div>
+      <!-- <div>
         <app-hero></app-hero>
       </div>
       <div>
@@ -116,7 +175,10 @@
       <div>
         <app-contact></app-contact>
       </div>
+      <div>
+        <app-admin-dashboard></app-admin-dashboard>
+      </div> -->
     </main>
-    <app-footer></app-footer>
+    <!-- <app-footer></app-footer> -->
   </body>
 </html>

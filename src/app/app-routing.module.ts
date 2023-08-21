@@ -14,6 +14,7 @@ import { SkillComponent } from './components/skill/skill.component';
 import { StartComponent } from './components/start/start.component';
 import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AdminTablesComponent } from './components/admin-tables/admin-tables.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", component: StartComponent },
@@ -31,6 +32,8 @@ const routes: Routes = [
   { path: "blogPage", component: BlogPageComponent },
   { path: "dashboard", component: AdminDashboardComponent },
   { path: "portfolio", component: PortfolioComponent },
+  { path: "admin-dashboard", component: AdminDashboardComponent },
+  { path: "admin-tables", component: AdminTablesComponent },
 
 ];
 

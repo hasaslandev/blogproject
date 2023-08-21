@@ -22,36 +22,42 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "*.js", 
+                "input": "src/assets/js",
+                "output": "/assets/js" 
+              }
             ],
             "styles": [
-              "node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css",
-              "node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
-              "node_modules/admin-lte/dist/css/adminlte.min.css",
 
-              "node_modules/aos/dist/aos.css"
+
+              "node_modules/aos/dist/aos.css",
+              "src/assets/css/material-dashboard.min.css",
+              "src/assets/css/nucleo-icons.css",
+              "src/assets/css/nucleo-svg.css"
 
 
             ],
             "scripts": [
 
               "node_modules/jquery/dist/jquery.min.js",
-
-
               "node_modules/popper.js/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
 
-              "node_modules/admin-lte/plugins/jquery/jquery.min.js",
-              "node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js",
-              "node_modules/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
-              "node_modules/admin-lte/dist/js/adminlte.js",
-              "node_modules/admin-lte/plugins/jquery-mousewheel/jquery.mousewheel.js",
-              "node_modules/admin-lte/plugins/raphael/raphael.min.js",
-              "node_modules/admin-lte/plugins/jquery-mapael/jquery.mapael.min.js",
-              "node_modules/admin-lte/plugins/jquery-mapael/maps/usa_states.min.js",
-              "node_modules/admin-lte/plugins/chart.js/Chart.min.js",
-              "node_modules/admin-lte/dist/js/demo.js",
-              "node_modules/admin-lte/dist/js/pages/dashboard2.js"
+              "src/assets/js/core/bootstrap.min.js",
+              "src/assets/js/plugins/chartjs.min.js",
+              "src/assets/js/material-dashboard.min.js",
+              "src/assets/js/core/popper.min.js",
+              "src/assets/js/plugins/perfect-scrollbar.min.js",
+              "src/assets/js/plugins/smooth-scrollbar.min.js",
+              "src/assets/js/plugins/chartjs.min.js",
+              "src/assets/js/core/bootstrap.bundle.min.js",
+              "src/assets/js/plugins/world.js",
+              "src/assets/js/plugins/countup.min.js",
+              "src/assets/js/plugins/bootstrap-notify.js",
+              "src/assets/js/plugins/Chart.extension.js"
+              
 
             ]
             

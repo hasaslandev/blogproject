@@ -15,6 +15,12 @@ import { StartComponent } from './components/start/start.component';
 import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AdminTablesComponent } from './components/admin-tables/admin-tables.component';
+import { AdminBillingComponent } from './components/admin-billing/admin-billing.component';
+import { AdminVirtualRealityComponent } from './components/admin-virtual-reality/admin-virtual-reality.component';
+import { AdminNotificationsComponent } from './components/admin-notifications/admin-notifications.component';
+import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
+import { AdminSigninComponent } from './components/admin-signin/admin-signin.component';
+import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", component: StartComponent },
@@ -34,6 +40,12 @@ const routes: Routes = [
   { path: "portfolio", component: PortfolioComponent },
   { path: "admin-dashboard", component: AdminDashboardComponent },
   { path: "admin-tables", component: AdminTablesComponent },
+  { path: "admin-billing", component: AdminBillingComponent },
+  { path: "admin-virtual-reality", component: AdminVirtualRealityComponent },
+  { path: "admin-notifications", component: AdminNotificationsComponent },
+  { path: "admin-profile", component: AdminProfileComponent },
+  { path: "admin-signin", component: AdminSigninComponent },
+  { path: "admin-signup", component: AdminSignupComponent },
 
 ];
 

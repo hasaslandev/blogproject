@@ -32,6 +32,13 @@ import { DenemeTemplateComponent } from './components/deneme-template/deneme-tem
 import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AdminTablesComponent } from './components/admin-tables/admin-tables.component';
+import { AdminBillingComponent } from './components/admin-billing/admin-billing.component';
+import { AdminPageComponent } from './components/admin-page/admin-page.component';
+import { AdminVirtualRealityComponent } from './components/admin-virtual-reality/admin-virtual-reality.component';
+import { AdminNotificationsComponent } from './components/admin-notifications/admin-notifications.component';
+import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
+import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
+import { AdminSigninComponent } from './components/admin-signin/admin-signin.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +66,13 @@ import { AdminTablesComponent } from './components/admin-tables/admin-tables.com
     BlogPageComponent,
     AdminDashboardComponent,
     AdminTablesComponent,
+    AdminBillingComponent,
+    AdminPageComponent,
+    AdminVirtualRealityComponent,
+    AdminNotificationsComponent,
+    AdminProfileComponent,
+    AdminSignupComponent,
+    AdminSigninComponent,
   ],
   imports: [
     BrowserModule,

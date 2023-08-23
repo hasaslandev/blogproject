@@ -21,6 +21,10 @@ import { AdminNotificationsComponent } from './components/admin-notifications/ad
 import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
 import { AdminSigninComponent } from './components/admin-signin/admin-signin.component';
 import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
+import { BloggerPageComponent } from './components/blogger-page/blogger-page.component';
+import { BloggerIndexComponent } from './components/blogger-index/blogger-index.component';
+import { BloggerSingleComponent } from './components/blogger-single/blogger-single.component';
+import { BloggerCategoryComponent } from './components/blogger-category/blogger-category.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", component: StartComponent },
@@ -46,6 +50,12 @@ const routes: Routes = [
   { path: "admin-profile", component: AdminProfileComponent },
   { path: "admin-signin", component: AdminSigninComponent },
   { path: "admin-signup", component: AdminSignupComponent },
+
+  { path: "bloggerPage", component: BloggerPageComponent },
+  { path: "bloggerIndex", component: BloggerIndexComponent },
+  { path: "bloggerSingle", component: BloggerSingleComponent },
+  { path: "bloggerCategory", component: BloggerCategoryComponent },
+
 
 ];
 

@@ -56,7 +56,5 @@ export class BlogComponent {
       this.toasterService.success("Sepete Eklendi", blog.blogTitle);
       this.cartService.addToCart(blog);
     }
-
-
   }
 }

@@ -39,6 +39,10 @@ import { AdminNotificationsComponent } from './components/admin-notifications/ad
 import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
 import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
 import { AdminSigninComponent } from './components/admin-signin/admin-signin.component';
+import { BloggerPageComponent } from './components/blogger-page/blogger-page.component';
+import { BloggerIndexComponent } from './components/blogger-index/blogger-index.component';
+import { BloggerSingleComponent } from './components/blogger-single/blogger-single.component';
+import { BloggerCategoryComponent } from './components/blogger-category/blogger-category.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +77,10 @@ import { AdminSigninComponent } from './components/admin-signin/admin-signin.com
     AdminProfileComponent,
     AdminSignupComponent,
     AdminSigninComponent,
+    BloggerPageComponent,
+    BloggerIndexComponent,
+    BloggerSingleComponent,
+    BloggerCategoryComponent,
   ],
   imports: [
     BrowserModule,

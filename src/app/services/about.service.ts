@@ -13,10 +13,13 @@ export class AboutService {
 
   constructor(private httpclient: HttpClient) { }
   getAbouts(): Observable<ListResponseModel<About>> {
-    return this.httpclient.get<ListResponseModel<About>>(this.apiUrl);
+    return this.httpclient.get<ListResponseModel<About>>(this.apiUrl + "abouts/getall");
   }
 
   add(about: About): Observable<ResponseModel> {
     return this.httpclient.post<ResponseModel>(this.apiUrl + "abouts/add", about);
+  }
+  getById(id: number): Observable<About> {
+    return this.httpclient.get<About>(this.apiUrl + "abouts/getbyid?id=" + id);
   }
 }

@@ -43,6 +43,7 @@ import { BloggerPageComponent } from './components/blogger-page/blogger-page.com
 import { BloggerIndexComponent } from './components/blogger-index/blogger-index.component';
 import { BloggerSingleComponent } from './components/blogger-single/blogger-single.component';
 import { BloggerCategoryComponent } from './components/blogger-category/blogger-category.component';
+import { AdminAboutAboutDetailComponent } from './components/admin-about-about-detail/admin-about-about-detail.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { BloggerCategoryComponent } from './components/blogger-category/blogger-
     BloggerIndexComponent,
     BloggerSingleComponent,
     BloggerCategoryComponent,
+    AdminAboutAboutDetailComponent,
   ],
   imports: [
     BrowserModule,

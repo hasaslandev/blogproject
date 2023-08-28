@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Hakkımda İçerik 1</label
+      >
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+      ></textarea>
+      <br />
+      <label for="exampleFormControlTextarea2" class="form-label"
+        >Hakkımda İçerik 2</label
+      >
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea2"
+        rows="3"
+      ></textarea>
+      <br /><br />
+
+      <div>
+        <label for="formFileLg1" class="form-label">Hakkımda için Resim1</label>
+        <input
+          class="form-control form-control-lg"
+          id="formFileLg1"
+          type="file"
+        />
+      </div>
+      <div>
+        <label for="formFileLg2" class="form-label">Hakkımda için Resim2</label>
+        <input
+          class="form-control form-control-lg"
+          id="formFileLg2"
+          type="file"
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <img
+        src="assets/img/bg-pricing.jpg"
+        class="rounded float-start"
+        alt="..."
+        style="height: 200px; width: 200px"
+      />
+      <img
+        src="assets/img/bg-pricing.jpg"
+        class="rounded float-end"
+        alt="..."
+        style="height: 200px; width: 200px"
+      />
+      <p>{{ about.aboutContent1 }}</p>
+    </div>
+  </body>
+</html>

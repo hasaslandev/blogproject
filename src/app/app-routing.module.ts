@@ -25,6 +25,7 @@ import { BloggerPageComponent } from './components/blogger-page/blogger-page.com
 import { BloggerIndexComponent } from './components/blogger-index/blogger-index.component';
 import { BloggerSingleComponent } from './components/blogger-single/blogger-single.component';
 import { BloggerCategoryComponent } from './components/blogger-category/blogger-category.component';
+import { AdminAboutAboutDetailComponent } from './components/admin-about-about-detail/admin-about-about-detail.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", component: StartComponent },
@@ -43,7 +44,7 @@ const routes: Routes = [
   { path: "dashboard", component: AdminDashboardComponent },
   { path: "portfolio", component: PortfolioComponent },
   { path: "admin-dashboard", component: AdminDashboardComponent },
-  { path: "admin-tables", component: AdminTablesComponent },
+  { path: "admin/tables", component: AdminTablesComponent },
   { path: "admin-billing", component: AdminBillingComponent },
   { path: "admin-virtual-reality", component: AdminVirtualRealityComponent },
   { path: "admin-notifications", component: AdminNotificationsComponent },
@@ -55,6 +56,7 @@ const routes: Routes = [
   { path: "bloggerIndex", component: BloggerIndexComponent },
   { path: "bloggerSingle", component: BloggerSingleComponent },
   { path: "bloggerCategory", component: BloggerCategoryComponent },
+  { path: "admin/about/aboutDetail/:id", component: AdminAboutAboutDetailComponent },
 
 
 ];

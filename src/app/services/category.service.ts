@@ -9,10 +9,14 @@ import { ListResponseModel } from '../Models/ListResponseModel';
   providedIn: 'root'
 })
 export class CategoryService {
-  apiUrl = "https://localhost:7250/api/Categories/getall";
+  apiUrl = "https://localhost:7250/api/Categories";
 
   constructor(private httpclient: HttpClient) { }
+
   getCategories(): Observable<ListResponseModel<Category>> {
-    return this.httpclient.get<ListResponseModel<Category>>(this.apiUrl);
+    return this.httpclient.get<ListResponseModel<Category>>(this.apiUrl + "/getall");
+  }
+  getById(id: number): Observable<Category> {
+    return this.httpclient.get<Category>(this.apiUrl + "/getbyid?categoryId=" + id);
   }
 }

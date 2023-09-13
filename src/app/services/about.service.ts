@@ -22,4 +22,7 @@ export class AboutService {
   getById(id: number): Observable<About> {
     return this.httpclient.get<About>(this.apiUrl + "abouts/getbyid?id=" + id);
   }
+  update(id: number): Observable<About> {
+    return this.httpclient.post<About>(this.apiUrl + "abouts/update", id);
+  }
 }

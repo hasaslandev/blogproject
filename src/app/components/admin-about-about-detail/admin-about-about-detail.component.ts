@@ -22,17 +22,18 @@ export class AdminAboutAboutDetailComponent implements OnInit {
   loadAbout() {
     const aboutId = +this.route.snapshot.paramMap.get('id');
     this.aboutService.getById(aboutId).subscribe(
-      data => {
-        this.about = data;
-        console.log('About Data:', this.about); // Veriyi konsolda görüntüle
+      (response: any) => { // response değişkenine any türü atanıyor
+        if (response.success) {
+          this.about = response.data; // response.data'daki veriyi atıyoruz
+          console.log('About Data:', this.about);
+        } else {
+          console.error('Error:', response.message);
+        }
       },
       error => {
-        console.error('Error:', error); // Hata durumunu konsolda görüntüle
+        console.error('Error:', error);
       }
     );
   }
-
-
-
 
 }

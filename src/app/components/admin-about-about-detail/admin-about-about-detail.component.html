@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css" />
   </head>
   <body>
+    <h1>{{ about.aboutContent2 }}</h1>
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label"
         >Hakkımda İçerik 1</label
@@ -16,7 +17,8 @@
         class="form-control"
         id="exampleFormControlTextarea1"
         rows="3"
-      ></textarea>
+        >{{ about.aboutContent1 }}</textarea
+      >
       <br />
       <label for="exampleFormControlTextarea2" class="form-label"
         >Hakkımda İçerik 2</label
@@ -25,7 +27,8 @@
         class="form-control"
         id="exampleFormControlTextarea2"
         rows="3"
-      ></textarea>
+        >{{ about.aboutContent2 }}</textarea
+      >
       <br /><br />
 
       <div>
@@ -47,18 +50,17 @@
     </div>
     <div class="mb-3">
       <img
-        src="assets/img/bg-pricing.jpg"
+        src="..."
         class="rounded float-start"
-        alt="..."
+        alt="assets/img/bg-pricing.jpg"
         style="height: 200px; width: 200px"
       />
       <img
-        src="assets/img/bg-pricing.jpg"
+        src="..."
         class="rounded float-end"
-        alt="..."
+        alt="assets/img/bg-pricing.jpg"
         style="height: 200px; width: 200px"
       />
-      <p>{{ about.aboutContent1 }}</p>
     </div>
   </body>
 </html>

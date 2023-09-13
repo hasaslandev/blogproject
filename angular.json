@@ -51,7 +51,18 @@
     "src/assets/css/bootstrap-datepicker.css",
     "src/assets/fonts/flaticon/font/flaticon.css", 
     "src/assets/css/aos.css",
-    "src/assets/css/bootstrap/style.css"
+    "src/assets/css/bootstrap/style.css",
+
+
+    "node_modules/prismjs/themes/prism.css",
+    "node_modules/prismjs/themes/prism-okaidia.css",
+    "node_modules/katex/dist/katex.min.css",
+    "node_modules/prismjs/themes/prism-coy.css",
+
+    "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css",
+    "node_modules/prismjs/themes/prism.css",
+    "node_modules/prismjs/plugins/command-line/prism-command-line.css"
+
 
     
             ],
@@ -86,7 +97,14 @@
               "src/assets/js/blogjs/jquery.magnific-popup.min.js",
               "src/assets/js/blogjs/bootstrap-datepicker.min.js",
               "src/assets/js/blogjs/aos.js",
-              "src/assets/js/blogjs/main.js"
+              "src/assets/js/blogjs/main.js",
+
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/plugins/command-line/prism-command-line.js",
+              "node_modules/prismjs/components/prism-javascript.js", 
+              "node_modules/prismjs/components/prism-python.js"
+
+              
               
             ]
             

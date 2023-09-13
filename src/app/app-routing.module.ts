@@ -26,6 +26,7 @@ import { BloggerIndexComponent } from './components/blogger-index/blogger-index.
 import { BloggerSingleComponent } from './components/blogger-single/blogger-single.component';
 import { BloggerCategoryComponent } from './components/blogger-category/blogger-category.component';
 import { AdminAboutAboutDetailComponent } from './components/admin-about-about-detail/admin-about-about-detail.component';
+import { MarkdownComponent } from './components/markdown/markdown.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", component: StartComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: "blogs/category/:categoryID", component: BlogComponent },
   { path: "blogs/add", component: BlogAddComponent },
   { path: "abouts/add", component: AboutAddComponent },
+  { path: "category", component: CategoryComponent },
   { path: "abouts", component: AboutComponent },
   { path: "login", component: LoginComponent },
   { path: "blogHome", component: BlogHomeComponent },
@@ -54,9 +56,10 @@ const routes: Routes = [
 
   { path: "bloggerPage", component: BloggerPageComponent },
   { path: "bloggerIndex", component: BloggerIndexComponent },
-  { path: "bloggerSingle", component: BloggerSingleComponent },
-  { path: "bloggerCategory", component: BloggerCategoryComponent },
+  { path: "bloggerSingle/:id", component: BloggerSingleComponent },
+  { path: "bloggerCategory/:id", component: BloggerCategoryComponent },
   { path: "admin/about/aboutDetail/:id", component: AdminAboutAboutDetailComponent },
+  { path: "marki", component: MarkdownComponent },
 
 
 ];

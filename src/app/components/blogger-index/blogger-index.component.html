@@ -42,7 +42,7 @@
             </div>
 
             <div class="col-4 site-logo">
-              <a href="index.html" class="text-black h2 mb-0">Mini Blog</a>
+              <a href="/bloggerIndex" class="text-black h2 mb-0">Mini Blog</a>
             </div>
 
             <div class="col-8 text-right">
@@ -78,61 +78,81 @@
           <div class="row align-items-stretch retro-layout-2">
             <div class="col-md-4">
               <a
-                href="single.html"
+                href="/bloggerSingle/{{ topFiveBlogPost[1].blogID }}"
                 class="h-entry mb-30 v-height gradient"
-                style="background-image: url('/assets/img/img_1.jpg')"
+                style="background-image: url('{{
+                  topFiveBlogPost[1].blogImage
+                }}')"
               >
                 <div class="text">
-                  <h2>The AI magically removes moving objects from videos.</h2>
-                  <span class="date">July 19, 2019</span>
+                  <h2>{{ topFiveBlogPost[1].blogTitle }}</h2>
+                  <span class="date">{{
+                    topFiveBlogPost[1].blogDate | date
+                  }}</span>
                 </div>
               </a>
               <a
-                href="single.html"
+                href="/bloggerSingle/{{ topFiveBlogPost[2].blogID }}"
                 class="h-entry v-height gradient"
-                style="background-image: url('/assets/img/img_2.jpg')"
+                style="background-image: url('{{
+                  topFiveBlogPost[2].blogImage
+                }}')"
               >
                 <div class="text">
-                  <h2>The AI magically removes moving objects from videos.</h2>
-                  <span class="date">July 19, 2019</span>
+                  <h2>{{ topFiveBlogPost[2].blogTitle }}.</h2>
+                  <span class="date">{{
+                    topFiveBlogPost[2].blogDate | date
+                  }}</span>
                 </div>
               </a>
             </div>
             <div class="col-md-4">
               <a
-                href="single.html"
+                href="/bloggerSingle/{{ topFiveBlogPost[0].blogID }}"
                 class="h-entry img-5 h-100 gradient"
-                style="background-image: url('/assets/img/img_v_1.jpg')"
+                style="background-image: url('{{
+                  topFiveBlogPost[0].blogImage
+                }}')"
               >
                 <div class="text">
                   <div class="post-categories mb-3">
                     <span class="post-category bg-danger">Travel</span>
                     <span class="post-category bg-primary">Food</span>
                   </div>
-                  <h2>The AI magically removes moving objects from videos.</h2>
-                  <span class="date">July 19, 2019</span>
+                  <h2>{{ topFiveBlogPost[0].blogTitle }}</h2>
+                  <span class="date">{{
+                    topFiveBlogPost[0].blogDate | date
+                  }}</span>
                 </div>
               </a>
             </div>
             <div class="col-md-4">
               <a
-                href="single.html"
+                href="/bloggerSingle/{{ topFiveBlogPost[3].blogID }}"
                 class="h-entry mb-30 v-height gradient"
-                style="background-image: url('/assets/img/img_3.jpg')"
+                style="background-image: url('{{
+                  topFiveBlogPost[3].blogImage
+                }}')"
               >
                 <div class="text">
-                  <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                  <span class="date">July 19, 2019</span>
+                  <h2>{{ topFiveBlogPost[3].blogTitle }}</h2>
+                  <span class="date">{{
+                    topFiveBlogPost[3].blogDate | date
+                  }}</span>
                 </div>
               </a>
               <a
-                href="single.html"
+                href="/bloggerSingle/{{ topFiveBlogPost[4].blogID }}"
                 class="h-entry v-height gradient"
-                style="background-image: url('/assets/img/img_4.jpg')"
+                style="background-image: url('{{
+                  topFiveBlogPost[4].blogImage
+                }}')"
               >
                 <div class="text">
-                  <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                  <span class="date">July 19, 2019</span>
+                  <h2>{{ topFiveBlogPost[4].blogTitle }}.</h2>
+                  <span class="date">{{
+                    topFiveBlogPost[4].blogDate | date
+                  }}</span>
                 </div>
               </a>
             </div>
@@ -144,15 +164,15 @@
         <div class="container">
           <div class="row mb-5">
             <div class="col-12">
-              <h2>Recent Posts</h2>
+              <h2>Yakın Zamandaki Bloglar</h2>
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-4 mb-4">
+            <div *ngFor="let blog of getAllBlogs" class="col-lg-4 mb-4">
               <div class="entry2">
-                <a href="single.html"
+                <a href="bloggerSingle/{{ blog.blogID }}"
                   ><img
-                    src="/assets/img/img_1.jpg"
+                    src="{{ blog.blogImage }}"
                     alt="Image"
                     class="img-fluid rounded"
                 /></a>
@@ -162,9 +182,9 @@
                   >
 
                   <h2>
-                    <a href="single.html"
-                      >The AI magically removes moving objects from videos.</a
-                    >
+                    <a href="bloggerSingle/{{ blog.blogID }}">{{
+                      blog.blogTitle
+                    }}</a>
                   </h2>
                   <div class="post-meta align-items-center text-left clearfix">
                     <figure class="author-figure mb-0 mr-3 float-left">
@@ -175,366 +195,21 @@
                       />
                     </figure>
                     <span class="d-inline-block mt-1"
-                      >By <a href="#">Carrol Atkinson</a></span
+                      >By <a href="#">Hasan Aslan</a></span
                     >
-                    <span>&nbsp;-&nbsp; July 19, 2019</span>
+                    <span>&nbsp;-&nbsp; {{ blog.blogDate | date }}</span>
                   </div>
 
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quo sunt tempora dolor laudantium sed optio, explicabo ad
-                    deleniti impedit facilis fugit recusandae! Illo, aliquid,
-                    dicta beatae quia porro id est.
-                  </p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-              <div class="entry2">
-                <a href="single.html"
-                  ><img
-                    src="/assets/img/img_2.jpg"
-                    alt="Image"
-                    class="img-fluid rounded"
-                /></a>
-                <div class="excerpt">
-                  <span class="post-category text-white bg-success mb-3"
-                    >Nature</span
-                  >
-
-                  <h2>
-                    <a href="single.html"
-                      >The AI magically removes moving objects from videos.</a
-                    >
-                  </h2>
-                  <div class="post-meta align-items-center text-left clearfix">
-                    <figure class="author-figure mb-0 mr-3 float-left">
-                      <img
-                        src="/assets/img/person_1.jpg"
-                        alt="Image"
-                        class="img-fluid"
-                      />
-                    </figure>
-                    <span class="d-inline-block mt-1"
-                      >By <a href="#">Carrol Atkinson</a></span
-                    >
-                    <span>&nbsp;-&nbsp; July 19, 2019</span>
-                  </div>
+                  <p>{{ blog.blogContent | slice : 0 : 170 }}...</p>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quo sunt tempora dolor laudantium sed optio, explicabo ad
-                    deleniti impedit facilis fugit recusandae! Illo, aliquid,
-                    dicta beatae quia porro id est.
+                    <a href="/bloggerSingle/{{ blog.blogID }}">Read More</a>
                   </p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-              <div class="entry2">
-                <a href="single.html"
-                  ><img
-                    src="/assets/img/img_3.jpg"
-                    alt="Image"
-                    class="img-fluid rounded"
-                /></a>
-                <div class="excerpt">
-                  <span class="post-category text-white bg-warning mb-3"
-                    >Travel</span
-                  >
-
-                  <h2>
-                    <a href="single.html"
-                      >The AI magically removes moving objects from videos.</a
-                    >
-                  </h2>
-                  <div class="post-meta align-items-center text-left clearfix">
-                    <figure class="author-figure mb-0 mr-3 float-left">
-                      <img
-                        src="/assets/img/person_1.jpg"
-                        alt="Image"
-                        class="img-fluid"
-                      />
-                    </figure>
-                    <span class="d-inline-block mt-1"
-                      >By <a href="#">Carrol Atkinson</a></span
-                    >
-                    <span>&nbsp;-&nbsp; July 19, 2019</span>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quo sunt tempora dolor laudantium sed optio, explicabo ad
-                    deleniti impedit facilis fugit recusandae! Illo, aliquid,
-                    dicta beatae quia porro id est.
-                  </p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 mb-4">
-              <div class="entry2">
-                <a href="single.html"
-                  ><img
-                    src="/assets/img/img_1.jpg"
-                    alt="Image"
-                    class="img-fluid rounded"
-                /></a>
-                <div class="excerpt">
-                  <span class="post-category text-white bg-secondary mb-3"
-                    >Politics</span
-                  >
-
-                  <h2>
-                    <a href="single.html"
-                      >The AI magically removes moving objects from videos.</a
-                    >
-                  </h2>
-                  <div class="post-meta align-items-center text-left clearfix">
-                    <figure class="author-figure mb-0 mr-3 float-left">
-                      <img
-                        src="/assets/img/person_1.jpg"
-                        alt="Image"
-                        class="img-fluid"
-                      />
-                    </figure>
-                    <span class="d-inline-block mt-1"
-                      >By <a href="#">Carrol Atkinson</a></span
-                    >
-                    <span>&nbsp;-&nbsp; July 19, 2019</span>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quo sunt tempora dolor laudantium sed optio, explicabo ad
-                    deleniti impedit facilis fugit recusandae! Illo, aliquid,
-                    dicta beatae quia porro id est.
-                  </p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-              <div class="entry2">
-                <a href="single.html"
-                  ><img
-                    src="/assets/img/img_2.jpg"
-                    alt="Image"
-                    class="img-fluid rounded"
-                /></a>
-                <div class="excerpt">
-                  <span class="post-category text-white bg-success mb-3"
-                    >Nature</span
-                  >
-
-                  <h2>
-                    <a href="single.html"
-                      >The AI magically removes moving objects from videos.</a
-                    >
-                  </h2>
-                  <div class="post-meta align-items-center text-left clearfix">
-                    <figure class="author-figure mb-0 mr-3 float-left">
-                      <img
-                        src="/assets/img/person_1.jpg"
-                        alt="Image"
-                        class="img-fluid"
-                      />
-                    </figure>
-                    <span class="d-inline-block mt-1"
-                      >By <a href="#">Carrol Atkinson</a></span
-                    >
-                    <span>&nbsp;-&nbsp; July 19, 2019</span>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quo sunt tempora dolor laudantium sed optio, explicabo ad
-                    deleniti impedit facilis fugit recusandae! Illo, aliquid,
-                    dicta beatae quia porro id est.
-                  </p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-              <div class="entry2">
-                <a href="single.html"
-                  ><img
-                    src="/assets/img/img_4.jpg"
-                    alt="Image"
-                    class="img-fluid rounded"
-                /></a>
-                <div class="excerpt">
-                  <span class="post-category text-white bg-danger mb-3"
-                    >Sports</span
-                  >
-
-                  <h2>
-                    <a href="single.html"
-                      >The AI magically removes moving objects from videos.</a
-                    >
-                  </h2>
-                  <div class="post-meta align-items-center text-left clearfix">
-                    <figure class="author-figure mb-0 mr-3 float-left">
-                      <img
-                        src="/assets/img/person_1.jpg"
-                        alt="Image"
-                        class="img-fluid"
-                      />
-                    </figure>
-                    <span class="d-inline-block mt-1"
-                      >By <a href="#">Carrol Atkinson</a></span
-                    >
-                    <span>&nbsp;-&nbsp; July 19, 2019</span>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quo sunt tempora dolor laudantium sed optio, explicabo ad
-                    deleniti impedit facilis fugit recusandae! Illo, aliquid,
-                    dicta beatae quia porro id est.
-                  </p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 mb-4">
-              <div class="entry2">
-                <a href="single.html"
-                  ><img
-                    src="/assets/img/img_1.jpg"
-                    alt="Image"
-                    class="img-fluid rounded"
-                /></a>
-                <div class="excerpt">
-                  <span class="post-category text-white bg-success mb-3"
-                    >Nature</span
-                  >
-
-                  <h2>
-                    <a href="single.html"
-                      >The AI magically removes moving objects from videos.</a
-                    >
-                  </h2>
-                  <div class="post-meta align-items-center text-left clearfix">
-                    <figure class="author-figure mb-0 mr-3 float-left">
-                      <img
-                        src="/assets/img/person_1.jpg"
-                        alt="Image"
-                        class="img-fluid"
-                      />
-                    </figure>
-                    <span class="d-inline-block mt-1"
-                      >By <a href="#">Carrol Atkinson</a></span
-                    >
-                    <span>&nbsp;-&nbsp; July 19, 2019</span>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quo sunt tempora dolor laudantium sed optio, explicabo ad
-                    deleniti impedit facilis fugit recusandae! Illo, aliquid,
-                    dicta beatae quia porro id est.
-                  </p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-              <div class="entry2">
-                <a href="single.html"
-                  ><img
-                    src="/assets/img/img_2.jpg"
-                    alt="Image"
-                    class="img-fluid rounded"
-                /></a>
-                <div class="excerpt">
-                  <span class="post-category text-white bg-danger mb-3"
-                    >Sports</span
-                  >
-                  <span class="post-category text-white bg-secondary mb-3"
-                    >Tech</span
-                  >
-
-                  <h2>
-                    <a href="single.html"
-                      >The AI magically removes moving objects from videos.</a
-                    >
-                  </h2>
-                  <div class="post-meta align-items-center text-left clearfix">
-                    <figure class="author-figure mb-0 mr-3 float-left">
-                      <img
-                        src="/assets/img/person_1.jpg"
-                        alt="Image"
-                        class="img-fluid"
-                      />
-                    </figure>
-                    <span class="d-inline-block mt-1"
-                      >By <a href="#">Carrol Atkinson</a></span
-                    >
-                    <span>&nbsp;-&nbsp; July 19, 2019</span>
-                  </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quo sunt tempora dolor laudantium sed optio, explicabo ad
-                    deleniti impedit facilis fugit recusandae! Illo, aliquid,
-                    dicta beatae quia porro id est.
-                  </p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-              <div class="entry2">
-                <a href="single.html"
-                  ><img
-                    src="/assets/img/img_4.jpg"
-                    alt="Image"
-                    class="img-fluid rounded"
-                /></a>
-                <div class="excerpt">
-                  <span class="post-category text-white bg-danger mb-3"
-                    >Sports</span
-                  >
-                  <span class="post-category text-white bg-warning mb-3"
-                    >Lifestyle</span
-                  >
-
-                  <h2>
-                    <a href="single.html"
-                      >The AI magically removes moving objects from videos.</a
-                    >
-                  </h2>
-                  <div class="post-meta align-items-center text-left clearfix">
-                    <figure class="author-figure mb-0 mr-3 float-left">
-                      <img
-                        src="/assets/img/person_1.jpg"
-                        alt="Image"
-                        class="img-fluid"
-                      />
-                    </figure>
-                    <span class="d-inline-block mt-1"
-                      >By <a href="#">Carrol Atkinson</a></span
-                    >
-                    <span>&nbsp;-&nbsp; July 19, 2019</span>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quo sunt tempora dolor laudantium sed optio, explicabo ad
-                    deleniti impedit facilis fugit recusandae! Illo, aliquid,
-                    dicta beatae quia porro id est.
-                  </p>
-                  <p><a href="#">Read More</a></p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row text-center pt-5 border-top">
+          <!-- <div class="row text-center pt-5 border-top">
             <div class="col-md-12">
               <div class="custom-pagination">
                 <span>1</span>
@@ -545,11 +220,11 @@
                 <a href="#">15</a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
-      <div class="site-section bg-light">
+      <!-- <div class="site-section bg-light">
         <div class="container">
           <div class="row align-items-stretch retro-layout">
             <div class="col-md-5 order-md-2">
@@ -610,7 +285,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="site-section bg-lightx">
         <div class="container">

@@ -17,8 +17,9 @@
     <header id="header">
       <div class="d-flex flex-column">
         <div class="profile">
+          r
           <img
-            src="/assets/img/profile-img.jpg"
+            src="/assets/img/HasanPhotoWeb.jpg"
             alt=""
             class="img-fluid rounded-circle"
           />
@@ -48,55 +49,32 @@
             <!--<a href="#hero" class="nav-link scrollto active"
 -->
             <li>
-              <a
-                id="hero-link"
-                href="#hero"
-                [ngClass]="{
-                  'nav-link': true,
-                  scrollto: true,
-                  active: isLinkActive('hero-link')
-                }"
-                (click)="handleLinkClick('hero-link')"
+              <a id="hero-link" href="#hero"
                 ><i class="bx bx-home"></i> <span>Ana Menü</span></a
               >
             </li>
             <li>
-              <a
-                id="about-link"
-                href="#about"
-                [ngClass]="{
-                  'nav-link': true,
-                  scrollto: true,
-                  active: isLinkActive('about-link')
-                }"
-                (click)="handleLinkClick('about-link')"
+              <a id="about-link" href="#about"
                 ><i class="bx bx-user"></i> <span>Hakkımda</span></a
               >
             </li>
             <li>
-              <a
-                id="resume-link"
-                href="#resume"
-                [ngClass]="{
-                  'nav-link': true,
-                  scrollto: true,
-                  active: isLinkActive('resume-link')
-                }"
-                (click)="handleLinkClick('resume-link')"
+              <a id="skills-link" href="#skills"
+                ><i class="bx bx-alarm-add"></i> <span>Yeteneklerim</span></a
+              >
+            </li>
+            <li>
+              <a id="resume-link" href="#resume"
                 ><i class="bx bx-file-blank"></i> <span>Özgeçmişim</span></a
               >
             </li>
             <li>
-              <a
-                id="services-link"
-                href="#services"
-                [ngClass]="{
-                  'nav-link': true,
-                  scrollto: true,
-                  active: isLinkActive('services-link')
-                }"
-                (click)="handleLinkClick('services-link')"
+              <a id="portfolio-link" href="#portfolio"
+                ><i class="bx bx-book-content"></i> <span>Bloglarım</span></a
               >
+            </li>
+            <li>
+              <a id="services-link" href="#services">
                 <i class="bx bx-server"></i>
                 <span>
                   Bu Web Sitesini Geliştirirken<br />
@@ -104,43 +82,9 @@
                 </span>
               </a>
             </li>
-            <li>
-              <a
-                id="skills-link"
-                href="#skills"
-                [ngClass]="{
-                  'nav-link': true,
-                  scrollto: true,
-                  active: isLinkActive('skills-link')
-                }"
-                (click)="handleLinkClick('skills-link')"
-                ><i class="bx bx-alarm-add"></i> <span>Yeteneklerim</span></a
-              >
-            </li>
-            <li>
-              <a
-                id="portfolio-link"
-                href="#portfolio"
-                [ngClass]="{
-                  'nav-link': true,
-                  scrollto: true,
-                  active: isLinkActive('portfolio-link')
-                }"
-                (click)="handleLinkClick('portfolio-link')"
-                ><i class="bx bx-book-content"></i> <span>Bloglarım</span></a
-              >
-            </li>
 
             <li>
-              <a
-                id="portfolio-link"
-                href="#contact"
-                [ngClass]="{
-                  'nav-link': true,
-                  scrollto: true,
-                  active: isLinkActive('contact-link')
-                }"
-                (click)="handleLinkClick('contact-link')"
+              <a id="portfolio-link" href="#contact"
                 ><i class="bx bx-envelope"></i> <span>İletişim</span></a
               >
             </li>

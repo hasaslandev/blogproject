@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { About } from 'src/app/Models/about';
+import { Blog } from 'src/app/Models/blog';
 import { AboutService } from 'src/app/services/about.service';
 
 @Component({
@@ -10,6 +12,14 @@ import { AboutService } from 'src/app/services/about.service';
 })
 
 export class AboutAddComponent implements OnInit {
+  abouts: About[] = [];
+  dataLoaded = false;
+  getAbouts() {
+    this.aboutService.getAbouts().subscribe(response => {
+      this.abouts = response.data
+      this.dataLoaded = true;
+    })
+  }
   aboutAddForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private aboutService: AboutService,
@@ -46,6 +56,15 @@ export class AboutAddComponent implements OnInit {
       this.toasterService.info("Formunuz eksik", "Dikkat");
     }
 
+  }
+  addToCard(about: About) {
+    if (about.aboutContent1 === "a") {
+      this.toasterService.error("Harf hatası!!!", "İstenilen kelime ekli değil");
+    }
+    else {
+      this.aboutService.add(about);
+      this.toasterService.success("Hakkında kısmı başarılı bir şekilde eklenmiştir", "Hakkımda kısmı eklendi");
+    }
   }
 
 }

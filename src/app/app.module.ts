@@ -44,6 +44,8 @@ import { BloggerIndexComponent } from './components/blogger-index/blogger-index.
 import { BloggerSingleComponent } from './components/blogger-single/blogger-single.component';
 import { BloggerCategoryComponent } from './components/blogger-category/blogger-category.component';
 import { AdminAboutAboutDetailComponent } from './components/admin-about-about-detail/admin-about-about-detail.component';
+import { MarkdownService } from 'ngx-markdown';
+import { MarkdownComponent } from './components/markdown/markdown.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +85,8 @@ import { AdminAboutAboutDetailComponent } from './components/admin-about-about-d
     BloggerSingleComponent,
     BloggerCategoryComponent,
     AdminAboutAboutDetailComponent,
+    MarkdownComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -97,6 +101,7 @@ import { AdminAboutAboutDetailComponent } from './components/admin-about-about-d
     })
   ],
   providers: [
+    MarkdownService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }   //Burayı incele
   ],
   bootstrap: [AppComponent]

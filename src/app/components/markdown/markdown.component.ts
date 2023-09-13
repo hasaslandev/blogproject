@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import * as marked from 'marked';
 import * as Prism from 'prismjs';
 import { NavigationEnd, Router } from '@angular/router';
+import { HighlightService } from 'src/app/services/highlight-service.service';
 
 
 
@@ -12,36 +13,35 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './markdown.component.html',
   styleUrls: ['./markdown.component.css']
 })
-export class MarkdownComponent implements OnInit, AfterViewInit {
+export class MarkdownComponent implements OnInit, AfterViewChecked {
   markdownContent: string;
+  highlighted: boolean = false;
+  constructor(private highlightService: HighlightService) {
 
-  constructor(private router: Router) {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        setTimeout(() => {
-          Prism.highlightAll();
-        });
-      }
-    });
-  } ngAfterViewInit(): void {
-    setTimeout(() => {
-      Prism.highlightAll();
-    });
   }
 
-  ngOnInit(): void {
+  ngAfterViewChecked(): void {
+
     // Markdown içeriğini doğrudan yerel dosyadan alın
     // Not: Bu sadece yerel geliştirme ortamında çalışır, üretimde işe yaramaz
+    if (this.markdownContent && !this.highlighted) {
+      this.highlightService.highlightAll();
+      this.highlighted = true;
+    }
+  }
+
+
+
+  ngOnInit(): void {
+
     fetch('assets/markdown/example.md')
       .then(response => response.text())
       .then(data => {
         this.markdownContent = marked.parse(data);
-        Prism.highlightAll(); // Kod bloklarını renklendirin
 
       })
       .catch(error => {
         console.error('Markdown dosyası yüklenirken bir hata oluştu:', error);
       });
-
   }
 }

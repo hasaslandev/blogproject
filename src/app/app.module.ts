@@ -45,6 +45,7 @@ import { BloggerSingleComponent } from './components/blogger-single/blogger-sing
 import { BloggerCategoryComponent } from './components/blogger-category/blogger-category.component';
 import { AdminAboutAboutDetailComponent } from './components/admin-about-about-detail/admin-about-about-detail.component';
 import { MarkdownService } from 'ngx-markdown';
+import { HighlightService } from './services/highlight-service.service'
 import { MarkdownComponent } from './components/markdown/markdown.component';
 
 @NgModule({
@@ -102,6 +103,7 @@ import { MarkdownComponent } from './components/markdown/markdown.component';
   ],
   providers: [
     MarkdownService,
+    HighlightService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }   //Burayı incele
   ],
   bootstrap: [AppComponent]
